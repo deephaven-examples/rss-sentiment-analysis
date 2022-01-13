@@ -1,0 +1,9 @@
+type=script
+scriptType=python
+enabled=true
+id=rss-reader
+name=RSS reader
+file_0=./helper_functions.py
+file_1=./read_rss.py
+file_2=./read_rss_default_analysis.py
+file_3=./read_rss_custom_analysis.py
