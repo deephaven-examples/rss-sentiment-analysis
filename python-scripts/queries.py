@@ -1,9 +1,13 @@
 # Simple statistics of each sentiment
 from deephaven import Aggregation as agg, as_list
 
-built_in_sia_hackernews_averages = built_in_sia_hackernews.aggBy(as_list([agg.AggAvg("Positive", "Negative", "Neutral", "Compound")]))
-built_in_sia_hackernews_medians = built_in_sia_hackernews.aggBy(as_list([agg.AggMed("Positive", "Negative", "Neutral", "Compound")]))
-built_in_sia_hackernews_deviations = built_in_sia_hackernews.aggBy(as_list([agg.AggStd("Positive", "Negative", "Neutral", "Compound")]))
+agg_list = as_list([
+    agg.AggAvg("Avg_Positive = Positive", "Avg_Negative = Negative", "Avg_Neutral = Neutral", "Avg_Compound = Compound"),
+    agg.AggMed("Med_Positive = Positive", "Med_Negative = Negative", "Med_Neutral = Neutral", "Med_Compound = Compound"),
+    agg.AggStd("Std_Positive = Positive", "Std_Negative = Negative", "Std_Neutral = Neutral", "Std_Compound = Compound"),
+])
+
+built_in_sia_hackernews_analyzed_statistics = built_in_sia_hackernews.aggBy(agg_list)
 
 # Positive percent of built in analysis
 built_in_sia_hackernews_positive_percent = built_in_sia_hackernews.update("PositiveCount = Positive > Negative ? 1 : 0")\
