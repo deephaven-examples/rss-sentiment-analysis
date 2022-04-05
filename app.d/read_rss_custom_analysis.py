@@ -61,7 +61,7 @@ custom_sia_hackernews = read_rss_continual(rss_feed_urls, rss_attributes_method=
 rss_feed_urls = ["https://seekingalpha.com/feed.xml"]
 custom_sia_seeking_alpha = read_rss_continual(rss_feed_urls, rss_attributes_method=rss_attributes_seeking_alpha, rss_datetime_converter=datetime_converter_seeking_alpha, sleep_time=120)
 
-custom_sia_wsb = custom_sia_wsb.update("Sentiment = classifier(RssEntryTitle)")
-custom_sia_all = custom_sia_all.update("Sentiment = classifier(RssEntryTitle)")
-custom_sia_hackernews = custom_sia_hackernews.update("Sentiment = classifier(RssEntryTitle)")
-custom_sia_seeking_alpha = custom_sia_seeking_alpha.update("Sentiment = classifier(RssEntryTitle)")
+custom_sia_wsb = custom_sia_wsb.update(["Sentiment = classifier(RssEntryTitle)"])
+custom_sia_all = custom_sia_all.update(["Sentiment = classifier(RssEntryTitle)"])
+custom_sia_hackernews = custom_sia_hackernews.update(["Sentiment = classifier(RssEntryTitle)"])
+custom_sia_seeking_alpha = custom_sia_seeking_alpha.update(["Sentiment = classifier(RssEntryTitle)"])
