@@ -3,7 +3,7 @@ from deephaven import agg
 
 agg_list = [
     agg.avg(cols=["Avg_Positive = Positive", "Avg_Negative = Negative", "Avg_Neutral = Neutral", "Avg_Compound = Compound"]),
-    agg.med(cols=["Med_Positive = Positive", "Med_Negative = Negative", "Med_Neutral = Neutral", "Med_Compound = Compound"]),
+    agg.median(cols=["Med_Positive = Positive", "Med_Negative = Negative", "Med_Neutral = Neutral", "Med_Compound = Compound"]),
     agg.std(cols=["Std_Positive = Positive", "Std_Negative = Negative", "Std_Neutral = Neutral", "Std_Compound = Compound"]),
 ]
 
