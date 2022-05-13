@@ -36,5 +36,5 @@ This app shows two examples of sentiment analysis, one using the default analyze
 To launch the app, run
 
 ```
-sh start.sh
+docker-compose up
 ```
