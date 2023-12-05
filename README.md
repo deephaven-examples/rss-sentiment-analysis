@@ -30,3 +30,7 @@ This app pulls RSS data from the specified RSS feeds using Python's [feedparser]
 When data is pulled, sentiment analysis is performed on attributes of the RSS data and stored in a Deephaven table. Deephaven table operations are then used to further analyze the data.
 
 This app shows two examples of sentiment analysis, one using the default analyzer from [NLTK](https://www.nltk.org/), and one using an analyzer trained from NLTK's built in data. The feed and attributes to analyze are customizable, so feel free to use this app to look at any RSS feed!
+
+## Note
+
+The code in this repository is built for Deephaven Community Core v0.12.0. No guarantee of forwards or backwards compatibility is given.
